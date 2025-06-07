@@ -11,9 +11,11 @@ app.listen(PORT, () => {
   console.log(`Server is listening on port http://localhost:${PORT}`);
 });
 
+// setInterval(() => {
+//   console.log(`Ma Nway Nway Hlaing Ko Chit Tal <3`);
+// }, 2000);
 
-
-// Route with middleware
+// Route with middleware 
 app.use('/users', TestRoute);
 app.get('/', AuthMiddleware, (req, res) => {
     const data = req.body;

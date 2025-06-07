@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const AuthMiddleware = require('../middleware/AuthMiddleware')
-const sendResponse = require('../utils/response');
+const testController = require("../controllers/TestController")
+const TestValidation  = require('../validations/TestValidator');
+const AuthMiddleware = require("../middleware/AuthMiddleware")
 
-router.get('/' ,AuthMiddleware , (req , res )=>{
-    const data = req.body
-    sendResponse(res , 200 , "Res from Router " , true , data)
-})
+router.get('/',AuthMiddleware, testController.getData);
+router.get('/get', testController.getUsers);
+router.post('/email',AuthMiddleware, testController.getData);
+router.post('/validation', TestValidation, testController.validation);
+
 
 module.exports = router;
