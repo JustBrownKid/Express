@@ -12,7 +12,7 @@ app.listen(PORT, () => {
 });
 
 // setInterval(() => {
-//   console.log(`Ma Nway Nway Hlaing Ko Chit Tal <3`);
+//   console.log(`Yoon Mi ဒုန်းဒုန်းဒုန်း `);
 // }, 2000);
 
 // Route with middleware 
